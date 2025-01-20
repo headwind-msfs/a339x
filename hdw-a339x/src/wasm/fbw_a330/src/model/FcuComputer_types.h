@@ -25,7 +25,8 @@ enum class efis_mode_selection
   ROSE_VOR,
   ROSE_NAV,
   ARC,
-  PLAN
+  PLAN,
+  ENG
 };
 
 #endif

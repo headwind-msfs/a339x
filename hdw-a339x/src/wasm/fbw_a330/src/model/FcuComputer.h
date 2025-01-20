@@ -273,11 +273,13 @@ class FcuComputer final
     efis_mode_selection EnumeratedConstant3_Value;
     efis_mode_selection EnumeratedConstant4_Value;
     efis_mode_selection EnumeratedConstant5_Value;
+    efis_mode_selection EnumeratedConstant13_Value;
     efis_mode_selection EnumeratedConstant2_Value_a;
     efis_mode_selection EnumeratedConstant1_Value_m;
     efis_mode_selection EnumeratedConstant3_Value_l;
     efis_mode_selection EnumeratedConstant4_Value_b;
     efis_mode_selection EnumeratedConstant5_Value_e;
+    efis_mode_selection EnumeratedConstant13_Value_j;
     efis_navaid_selection EnumeratedConstant12_Value;
     efis_navaid_selection EnumeratedConstant11_Value;
     efis_navaid_selection EnumeratedConstant12_Value_a;

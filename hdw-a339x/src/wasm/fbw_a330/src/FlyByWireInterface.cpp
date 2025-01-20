@@ -2281,7 +2281,7 @@ bool FlyByWireInterface::updateFcuShim() {
     }
   };
 
-  auto getNdMode = [](bool bit1, bool bit2, bool bit3, bool bit4, bool bit5) {
+  auto getNdMode = [](bool bit1, bool bit2, bool bit3, bool bit4, bool bit5, bool bit6) {
     if (bit5) {
       return 0;
     } else if (bit4) {
@@ -2292,6 +2292,8 @@ bool FlyByWireInterface::updateFcuShim() {
       return 3;
     } else if (bit1) {
       return 4;
+    } else if (bit6) {
+      return 5;
     } else {
       // We should never be getting here anyways
       return 0;
@@ -2338,7 +2340,8 @@ bool FlyByWireInterface::updateFcuShim() {
                                      Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_left, 12, true),
                                      Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_left, 13, false),
                                      Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_left, 14, false),
-                                     Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_left, 15, false)));
+                                     Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_left, 15, false),
+                                     Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_left, 16, false)));
   idFcuShimLeftNdRange->set(getNdRange(Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_1_left, 25, false),
                                        Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_1_left, 26, true),
                                        Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_1_left, 27, false),
@@ -2369,7 +2372,8 @@ bool FlyByWireInterface::updateFcuShim() {
                                       Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_right, 12, true),
                                       Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_right, 13, false),
                                       Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_right, 14, false),
-                                      Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_right, 15, false)));
+                                      Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_right, 15, false),
+                                      Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_2_right, 16, false)));
   idFcuShimRightNdRange->set(getNdRange(Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_1_right, 25, false),
                                         Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_1_right, 26, true),
                                         Arinc429Utils::bitFromValueOr(fcuBusOutputs.eis_discrete_word_1_right, 27, false),

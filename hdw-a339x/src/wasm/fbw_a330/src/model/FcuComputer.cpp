@@ -1270,7 +1270,8 @@ void FcuComputer::step()
       FcuComputer_P.EnumeratedConstant4_Value);
     rtb_VectorConcatenate[4] = (FcuComputer_U.in.discrete_inputs.capt_efis_inputs.efis_mode ==
       FcuComputer_P.EnumeratedConstant5_Value);
-    rtb_VectorConcatenate[5] = FcuComputer_P.Constant10_Value_p;
+    rtb_VectorConcatenate[5] = (FcuComputer_U.in.discrete_inputs.capt_efis_inputs.efis_mode ==
+      FcuComputer_P.EnumeratedConstant13_Value);
     rtb_VectorConcatenate[6] = (rtb_BusAssignment_d_efis_filter == FcuComputer_P.EnumeratedConstant7_Value_k);
     rtb_VectorConcatenate[7] = (rtb_BusAssignment_d_efis_filter == FcuComputer_P.EnumeratedConstant6_Value_l);
     rtb_VectorConcatenate[8] = (rtb_BusAssignment_d_efis_filter == FcuComputer_P.EnumeratedConstant8_Value_a);
@@ -1300,7 +1301,8 @@ void FcuComputer::step()
       FcuComputer_P.EnumeratedConstant4_Value_b);
     rtb_VectorConcatenate[4] = (FcuComputer_U.in.discrete_inputs.fo_efis_inputs.efis_mode ==
       FcuComputer_P.EnumeratedConstant5_Value_e);
-    rtb_VectorConcatenate[5] = FcuComputer_P.Constant10_Value_e;
+    rtb_VectorConcatenate[5] = (FcuComputer_U.in.discrete_inputs.fo_efis_inputs.efis_mode ==
+      FcuComputer_P.EnumeratedConstant13_Value_j);
     rtb_VectorConcatenate[6] = (rtb_efisFilter == FcuComputer_P.EnumeratedConstant7_Value_a);
     rtb_VectorConcatenate[7] = (rtb_efisFilter == FcuComputer_P.EnumeratedConstant6_Value_l4);
     rtb_VectorConcatenate[8] = (rtb_efisFilter == FcuComputer_P.EnumeratedConstant8_Value_p);

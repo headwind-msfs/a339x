@@ -272,6 +272,8 @@ FcuComputer::Parameters_FcuComputer_T FcuComputer::FcuComputer_P{
 
   efis_mode_selection::ROSE_ILS,
 
+  efis_mode_selection::ENG,
+
   efis_mode_selection::PLAN,
 
   efis_mode_selection::ARC,
@@ -279,6 +281,8 @@ FcuComputer::Parameters_FcuComputer_T FcuComputer::FcuComputer_P{
   efis_mode_selection::ROSE_NAV,
 
   efis_mode_selection::ROSE_VOR,
+
+  efis_mode_selection::ROSE_ILS,
 
   efis_mode_selection::ROSE_ILS,
 
